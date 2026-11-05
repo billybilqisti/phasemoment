@@ -1,0 +1,90 @@
+/* ==========================================================================
+   Right-Hand Project Selector (Frame 76)
+   Implements both Node 123:120 (Scrolled) and Node 81:149 (All menu)
+   ========================================================================== */
+.project-nav {
+  position: absolute;
+  right: 39px;
+  top: var(--header-height);
+  bottom: var(--footer-height);
+  width: 115px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle trigger zone for smooth hover reveal of all projects */
+.project-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.project-item {
+  width: 115px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  transition: opacity 0.4s var(--transition-smooth), transform 0.4s var(--transition-smooth);
+}
+
+.project-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 115px;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.64px;
+  letter-spacing: -0.28px;
+  color: var(--color-white);
+  text-align: right;
+  white-space: normal;
+  padding: 0;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* In default Scrolled Mode (Node 123:120):
+   Only the active project name is fully visible (opacity: 1),
+   while other projects are faded out to opacity: 0.
+   When the user hovers over the right nav area or scrolls,
+   all projects reveal gracefully (matching Node 81:149 Home - All menu)! */
+.project-item:not(.active) {
+  opacity: 0;
+  transform: translateX(12px);
+  pointer-events: none;
+}
+
+.project-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  mix-blend-mode: difference;
+}
+
+.project-item.active .project-btn {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* When hovering over the project nav or when 'expanded' class is active */
+.project-nav:hover .project-item:not(.active),
+.project-nav.expanded .project-item:not(.active) {
+  opacity: 0.5;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.project-nav:hover .project-item:not(.active):hover,
+.project-nav.expanded .project-item:not(.active):hover {
+  opacity: 1;
+  color: #ffffff;
+  transform: translateX(-4px);
+}

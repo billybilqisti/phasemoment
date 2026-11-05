@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --spacing-edge: 28px;
+    --right-menu-gap: 32px;
+  }
+  
+  .footer-inner, .header-inner {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-edge: 20px;
+    --header-height: 90px;
+    --footer-height: 110px;
+  }
+
+  .header-left, .header-right {
+    font-size: 12px;
+  }
+  
+  .symbol-icon {
+    width: 28px;
+    height: 25px;
+  }
+
+  .footer-left, .footer-right {
+    display: none; /* Hide edge metadata on mobile for clean focus */
+  }
+
+  .footer-inner {
+    justify-content: center;
+  }
+
+  .dock-pill {
+    padding: 4px 6px;
+    gap: 4px;
+  }
+
+  .dock-item {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .dock-item.active {
+    padding: 6px 12px;
+  }
+
+  .project-nav {
+    right: 20px;
+  }
+
+  .project-btn {
+    font-size: 12px;
+  }
+}

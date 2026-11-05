@@ -1,0 +1,755 @@
+/* ==========================================================================
+   Work Detail Page (Figma Node 97:182 — KURA Logo & Brand Redesign)
+   ========================================================================== */
+html:has(.work-detail-body),
+body.work-detail-body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  user-select: auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.work-detail-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #000000;
+}
+
+.work-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 40px;
+}
+
+/* Fixed Header Bar on Work Detail Page (matches Homepage Frame 49) */
+.work-header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 50;
+  height: var(--header-height);
+  padding: var(--spacing-edge);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
+.work-header-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  pointer-events: auto;
+}
+
+/* 1. Hero Section */
+.work-hero {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.work-hero-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1440 / 800;
+  min-height: 360px;
+  overflow: hidden;
+  background-color: #050505;
+}
+
+.work-hero-media::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  pointer-events: none;
+}
+
+.work-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* 2. Project Intro & Metadata Section */
+.work-intro-section {
+  margin-top: clamp(40px, 4.6vw, 66px);
+}
+
+.work-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 38.54vw);
+  justify-content: space-between;
+  align-items: stretch;
+  gap: clamp(32px, 5vw, 120px);
+}
+
+.work-intro-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 185px;
+}
+
+.work-project-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: clamp(24px, 2.22vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.work-title-primary {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.work-title-secondary {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.work-tags-pill {
+  margin-top: 48px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 31px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  width: fit-content;
+}
+
+.work-tag-item {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.work-tag-dot {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.work-intro-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 185px;
+}
+
+.work-intro-description {
+  font-size: clamp(16px, 1.39vw, 20px);
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.work-intro-copyright {
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.26;
+  letter-spacing: -0.28px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* 3. Logo Construction Grid & Typography Story */
+.work-logo-section {
+  margin-top: clamp(80px, 12.5vw, 180px);
+}
+
+.work-logo-grid-card {
+  width: 100%;
+  border-radius: clamp(8px, 0.85vw, 12px);
+  overflow: hidden;
+  background-color: #141414;
+}
+
+.work-logo-grid-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-logo-story {
+  max-width: 820px;
+  margin: clamp(28px, 2.7vw, 39px) auto 0;
+  padding: 0 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-logo-paragraph {
+  font-size: clamp(14px, 1.11vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.work-logo-paragraph + .work-logo-paragraph {
+  margin-top: 24px;
+}
+
+.work-logo-mark-wrap {
+  margin-top: clamp(24px, 2.4vw, 34px);
+  display: flex;
+  justify-content: center;
+}
+
+.work-logo-mark-red {
+  width: clamp(128px, 12vw, 172px);
+  height: auto;
+  display: block;
+}
+
+/* 4. Full-Bleed Altice Arena Banner */
+.work-banner-section {
+  margin-top: clamp(80px, 12.5vw, 180px);
+  width: 100%;
+}
+
+.work-banner-full {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.work-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Two Taped Posters Section */
+.work-posters-section {
+  margin-top: clamp(80px, 12.5vw, 180px);
+  width: 100%;
+}
+
+.work-posters-grid {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 9.16vw;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8.2vw;
+  align-items: start;
+}
+
+.work-poster-item {
+  width: 100%;
+  margin: 0;
+}
+
+.work-poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 6. Social Media Feed Showcase */
+.work-social-section {
+  margin-top: clamp(80px, 12.5vw, 180px);
+  width: 100%;
+}
+
+.work-social-strip-wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.work-social-strip-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-social-cards-mobile {
+  display: none;
+}
+
+/* 7. Studio Footer Section */
+.work-footer {
+  position: relative;
+  margin-top: clamp(96px, 12vw, 174px);
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+
+.work-footer-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.work-footer-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.work-footer-based-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: -0.28px;
+  margin-bottom: 2px;
+}
+
+.work-footer-loc-grid {
+  display: grid;
+  grid-template-columns: minmax(140px, 362px) minmax(120px, 294px) minmax(100px, auto);
+  row-gap: 6px;
+  column-gap: 16px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: -0.28px;
+  max-width: 780px;
+}
+
+/* Get in Touch CTA Box */
+.work-footer-cta-row {
+  margin-top: clamp(56px, 6vw, 85px);
+}
+
+.work-cta-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: min(100%, 511px);
+  height: 66px;
+}
+
+.work-cta-box::before,
+.work-cta-box::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 78px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
+
+.work-cta-box::before {
+  top: 0;
+}
+
+.work-cta-box::after {
+  bottom: 0;
+}
+
+.work-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.28px;
+  color: #ffffff;
+}
+
+.work-cta-btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 66px;
+  padding: 0 30px;
+  border-radius: 100px;
+  background: #282828;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(15px, 1.25vw, 18px);
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  white-space: nowrap;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.work-cta-btn:hover {
+  background: #383838;
+  transform: translateY(-1px);
+}
+
+/* Bottom Giant Wordmark & Links */
+.work-footer-bottom {
+  margin-top: clamp(64px, 6.7vw, 96px);
+}
+
+.work-footer-motto {
+  font-size: clamp(14px, 1.11vw, 16px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: -0.32px;
+  margin-bottom: 6px;
+}
+
+.work-footer-brand-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.work-footer-giant-logo {
+  font-size: clamp(42px, 7.64vw, 220px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.work-footer-meta-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(24px, 11vw, 165px);
+  padding-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.work-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.work-footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.work-footer-links a:hover {
+  color: #ffffff;
+}
+
+.work-link-sep {
+  opacity: 0.5;
+}
+
+.work-footer-copy {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+/* Decorative Sun Watermark (matches Figma Node 97:182 bottom-right position) */
+.work-footer-watermark {
+  position: absolute;
+  right: -135px;
+  bottom: 38px;
+  width: clamp(280px, 39vw, 560px);
+  aspect-ratio: 36 / 29;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.work-footer-watermark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Work Detail Page — Aloomah (Figma Node 112:17219)
+   ========================================================================== */
+.work-hero-media--aloomah::after {
+  display: none;
+}
+
+.aloomah-logo-section {
+  margin-top: clamp(80px, 12.5vw, 180px);
+}
+
+.aloomah-logo-card {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.aloomah-logo-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aloomah-full-section {
+  margin-top: clamp(24px, 2.78vw, 40px);
+  width: 100%;
+}
+
+.aloomah-full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* White Showcase Canvas (Rectangle 41562: y=3707..5860) */
+.aloomah-white-canvas {
+  margin-top: clamp(24px, 2.78vw, 40px);
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: clamp(24px, 2.78vw, 40px);
+}
+
+.aloomah-mockups-staggered {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 2.78vw, 40px);
+}
+
+.aloomah-mockup-card {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.aloomah-mockup-card--left {
+  width: 49.265%;
+  align-self: flex-start;
+  background-color: #b9e1ed;
+}
+
+.aloomah-mockup-card--right {
+  width: 57.721%;
+  align-self: flex-end;
+  background-color: #d9d9d9;
+}
+
+.aloomah-mockup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3 Feature Cards Section (Frame 238:6706) */
+.aloomah-features-wrap {
+  margin-top: clamp(24px, 2.78vw, 40px);
+  padding: clamp(48px, 14.65vw, 211px) clamp(0px, 2.78vw, 40px);
+}
+
+.aloomah-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28.8px);
+  align-items: stretch;
+}
+
+.aloomah-feature-card {
+  margin: 0;
+  width: 100%;
+}
+
+.aloomah-feature-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Social Media 4-Card Section on White Dotted Pattern (Frame 238:512) */
+.aloomah-social-section {
+  margin-top: clamp(24px, 2.78vw, 40px);
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Responsive Work Detail Page Breakpoints */
+@media (max-width: 1024px) {
+  .work-container {
+    padding: 0 28px;
+  }
+
+  .work-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .work-intro-left,
+  .work-intro-right {
+    min-height: auto;
+  }
+
+  .work-tags-pill {
+    margin-top: 20px;
+  }
+
+  .work-intro-copyright {
+    margin-top: 20px;
+  }
+
+  .work-footer-brand-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .work-footer-meta-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-container {
+    padding: 0 20px;
+  }
+
+  .work-posters-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 32px;
+    max-width: 520px;
+  }
+
+  .aloomah-mockup-card--left,
+  .aloomah-mockup-card--right {
+    width: 100%;
+  }
+
+  .aloomah-features-wrap {
+    padding: 36px 0;
+  }
+
+  .aloomah-features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .aloomah-social-section {
+    padding: 32px 0;
+  }
+
+  .aloomah-social-section .work-social-card-item img {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* Switch social strip to swipeable cards on mobile */
+  .work-social-strip-wrapper {
+    display: none;
+  }
+
+  .work-social-cards-mobile {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 20px 12px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .work-social-cards-mobile::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .work-social-cards-mobile::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .work-social-card-item {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+  }
+
+  .work-social-card-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  /* Compact 2-column location coordinates on mobile */
+  .work-footer-loc-grid {
+    grid-template-columns: 1fr auto;
+    max-width: 100%;
+  }
+
+  .work-loc-spacer {
+    display: none;
+  }
+
+  .work-cta-box {
+    height: 58px;
+  }
+
+  .work-cta-btn {
+    height: 58px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+
+  .work-cta-box::before,
+  .work-cta-box::after {
+    right: 65px;
+  }
+
+  .work-footer-giant-logo {
+    font-size: clamp(38px, 12.5vw, 68px);
+  }
+
+  .work-footer-meta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .work-footer-watermark {
+    right: -80px;
+    bottom: 24px;
+    width: 260px;
+  }
+}

@@ -1,0 +1,12 @@
+# Dependencies & build output
+node_modules/
+dist/
+
+# Local agent / MCP config (contains a Figma access token — never commit)
+.agents/mcp_config.json
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/

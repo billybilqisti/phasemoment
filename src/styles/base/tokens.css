@@ -1,0 +1,24 @@
+/* Design Tokens */
+:root {
+  --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --color-white: #ffffff;
+  --color-white-dim: rgba(255, 255, 255, 0.5);
+  --color-white-subtle: rgba(255, 255, 255, 0.2);
+  --color-dark: #000000;
+  --color-glass-dock: rgba(255, 255, 255, 0.1);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-pill-grad-start: rgba(255, 255, 255, 0.19);
+  --color-pill-grad-end: rgba(153, 153, 153, 0.19);
+  
+  --shadow-dock-pill: 0 4px 4px rgba(0, 0, 0, 0.1);
+  --shadow-dock-inner: inset 0 0 4px rgba(255, 255, 255, 0.25);
+  
+  --spacing-edge: 40px;
+  --header-height: 118px;
+  --footer-height: 124px;
+  --right-menu-gap: 49px;
+  
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-normal: 0.6s;
+  --duration-fast: 0.25s;
+}

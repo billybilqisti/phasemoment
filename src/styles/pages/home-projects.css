@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Project Imagery (Home slides + Work modal thumbnails)
+   Moved out of inline style="" attributes so Vite can resolve and hash them.
+   ========================================================================== */
+.slide[data-project="urbx"],
+.grid-card[data-project="urbx"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_urbx.png');
+}
+
+.grid-card[data-project="kura"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_kura.png');
+}
+
+.grid-card[data-project="aloomah"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_aloomah.png');
+}
+
+.slide[data-project="streamline"],
+.grid-card[data-project="streamline"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_streamline.png');
+}
+
+.slide[data-project="straightline"],
+.grid-card[data-project="straightline"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_straightline.png');
+}
+
+.slide[data-project="creatorloft"],
+.grid-card[data-project="creatorloft"] .card-thumb {
+  background-image: url('../../assets/images/home/bg_creatorloft.png');
+}
+
+/* Slides that link to a case-study page */
+.slide[data-href] {
+  cursor: pointer;
+}

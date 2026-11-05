@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Phasemoment® — Home entry stylesheet (Figma Node 123:120, Home - Scrolled)
+   Import order matters: tokens → reset → layout → components → responsive.
+   ========================================================================== */
+@import './base/tokens.css';
+@import './base/reset.css';
+
+@import './pages/home-showcase.css';
+@import './pages/home-projects.css';
+
+@import './components/header.css';
+@import './components/project-nav.css';
+@import './components/footer-bar.css';
+@import './components/dock.css';
+@import './components/modal.css';
+
+@import './base/responsive.css';
